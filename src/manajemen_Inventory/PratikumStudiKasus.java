@@ -26,7 +26,7 @@ public class PratikumStudiKasus {
             } else if (pilihanMenu == 2) {
                 tambahJmlStok2(namaItem, stok);
             } else if (pilihanMenu == 3) {
-
+                tambahItemBaru();
             } else if (pilihanMenu == 4) {
                 break;
             }
@@ -68,4 +68,44 @@ public class PratikumStudiKasus {
             }
         }
     }
+
+    public static void tambahItemBaru() {
+        String itemBaru = "", KategoriBaru = "";
+        int stokBaru = 0;
+
+        // menambahkan item baru
+        System.out.println("\n ====== Tambah Item Baru =====");
+        System.out.print("Masukan Nama Item Baru: ");
+        itemBaru = input.next();
+        System.out.print("Masukan Kategori item baru: ");
+        KategoriBaru = input.next();
+        System.out.print("Masukkan Stock Baru: ");
+        stokBaru = input.nextInt();
+
+        String[] namaItemBaru = new String[namaItem.length + 1];
+        String[] namaKategoriBaru = new String[kategori.length + 1];
+        int[] jumlahStokBaru = new int[stok.length + 1];
+
+        // meng copy nilai item lama ke data item terbaru
+        for (int i = 0; i < namaItem.length; i++) {
+            namaItemBaru[i] = namaItem[i];
+            namaKategoriBaru[i] = kategori[i];
+            jumlahStokBaru[i] = stok[i];
+        }
+
+        // menambahkan data item baru ke array
+        namaItemBaru[namaItem.length] = itemBaru;
+        namaKategoriBaru[kategori.length] = KategoriBaru;
+        jumlahStokBaru[stok.length] = stokBaru;
+
+        // untuk memperbarui array global
+        namaItem = namaItemBaru;
+        kategori = namaKategoriBaru;
+        stok = jumlahStokBaru;
+
+        System.out.println(
+                "\nItem baru berhasil ditambahkan: " + itemBaru + " (" + namaKategoriBaru + ") Stok: " + stokBaru);
+
+    }
+
 }
