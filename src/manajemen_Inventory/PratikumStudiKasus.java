@@ -70,15 +70,16 @@ public class PratikumStudiKasus {
     }
 
     public static void tambahItemBaru() {
+        input.nextLine();
         String itemBaru = "", KategoriBaru = "";
         int stokBaru = 0;
 
         // menambahkan item baru
         System.out.println("\n ====== Tambah Item Baru =====");
         System.out.print("Masukan Nama Item Baru: ");
-        itemBaru = input.next();
+        itemBaru = input.nextLine();
         System.out.print("Masukan Kategori item baru: ");
-        KategoriBaru = input.next();
+        KategoriBaru = input.nextLine();
         System.out.print("Masukkan Stock Baru: ");
         stokBaru = input.nextInt();
 
@@ -104,7 +105,7 @@ public class PratikumStudiKasus {
         stok = jumlahStokBaru;
 
         System.out.println(
-                "\nItem baru berhasil ditambahkan: " + itemBaru + " (" + KategoriBaru + ") Stok: " + stokBaru);
+                "\nItem baru berhasil ditambahkan: " + itemBaru + " (" + KategoriBaru + ") - Stok: " + stokBaru);
 
     }
 
