@@ -12,6 +12,7 @@ public class PratikumStudiKasus {
 
             System.out.print("Pilih menu: ");
             System.out.print("Pilih menu: ");
+            System.out.print("Pilih menu: ");
         }
     }
 
