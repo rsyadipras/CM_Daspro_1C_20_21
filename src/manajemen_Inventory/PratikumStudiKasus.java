@@ -104,7 +104,7 @@ public class PratikumStudiKasus {
         stok = jumlahStokBaru;
 
         System.out.println(
-                "\nItem baru berhasil ditambahkan: " + itemBaru + " (" + namaKategoriBaru + ") Stok: " + stokBaru);
+                "\nItem baru berhasil ditambahkan: " + itemBaru + " (" + KategoriBaru + ") Stok: " + stokBaru);
 
     }
 
